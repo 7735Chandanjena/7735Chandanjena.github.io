@@ -1,19 +1,1258 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Chandan Jena | Data Analyst & AI/ML Enthusiast</title>
+    <title>Chandan Jena | Data Analyst & AI/ML Enthusiast</title>
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        scroll-behavior: smooth;
-    }
+    <meta name="description"
+        content="Chandan Jena - Aspiring Data Analyst and AI/ML Enthusiast. Portfolio showcasing data analytics, machine learning, dashboards, Generative AI and projects.">
 
-    body {
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1120;
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 0 25px;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            background: rgba(11, 17, 32, 0.96);
+            border-bottom: 1px solid #1f2937;
+
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            margin: auto;
+
+            padding: 18px 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            max-width: 1150px;
+            margin: auto;
+
+            padding: 145px 25px 90px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 60px;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 650px;
+        }
+
+        .hello {
+            color: #38bdf8;
+            font-size: 19px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            line-height: 1.05;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 27px;
+            line-height: 1.3;
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #cbd5e1;
+            max-width: 650px;
+            margin-bottom: 32px;
+        }
+
+
+        /* PROFILE IMAGE */
+
+        .hero-image {
+            flex: 0 0 320px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 300px;
+            height: 300px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+            border: 4px solid #38bdf8;
+
+            box-shadow:
+                0 0 30px rgba(56, 189, 248, 0.20);
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 13px 24px;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn.primary {
+            background: #38bdf8;
+            color: #07111f;
+        }
+
+        .btn.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.25);
+        }
+
+        .btn.secondary {
+            border: 1px solid #334155;
+            color: #e2e8f0;
+        }
+
+        .btn.secondary:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            max-width: 1150px;
+            margin: auto;
+            padding: 100px 25px;
+        }
+
+        .section-title {
+            text-align: center;
+
+            font-size: 38px;
+            color: #ffffff;
+
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            color: #38bdf8;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-box {
+            max-width: 900px;
+            margin: auto;
+
+            background: #111827;
+
+            border: 1px solid #1f2937;
+
+            border-radius: 14px;
+
+            padding: 35px;
+        }
+
+        .about-box p {
+            color: #cbd5e1;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+
+        .about-box p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #111827;
+
+            border: 1px solid #1f2937;
+
+            border-radius: 12px;
+
+            padding: 25px;
+
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .skill-card h3 {
+            color: #38bdf8;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .skill-card p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #111827;
+
+            border: 1px solid #1f2937;
+
+            border-radius: 14px;
+
+            padding: 30px;
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .project-number {
+            color: #38bdf8;
+            font-size: 14px;
+            font-weight: bold;
+
+            margin-bottom: 12px;
+        }
+
+        .project-card h3 {
+            color: #ffffff;
+            font-size: 23px;
+
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #94a3b8;
+            margin-bottom: 18px;
+        }
+
+        .project-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .project-tools span {
+            background: #1e293b;
+
+            color: #cbd5e1;
+
+            padding: 6px 10px;
+
+            border-radius: 5px;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience-box {
+            max-width: 900px;
+            margin: auto;
+
+            background: #111827;
+
+            border-left: 3px solid #38bdf8;
+
+            padding: 30px;
+
+            border-radius: 0 12px 12px 0;
+        }
+
+        .experience-box h3 {
+            color: #ffffff;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .experience-box .date {
+            color: #38bdf8;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .experience-box p {
+            color: #94a3b8;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        .education-card {
+            background: #111827;
+
+            border: 1px solid #1f2937;
+
+            border-radius: 14px;
+
+            padding: 30px;
+        }
+
+        .education-card h3 {
+            color: #ffffff;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .education-card .highlight {
+            color: #38bdf8;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .education-card p {
+            color: #94a3b8;
+        }
+
+
+        /* =========================
+           CERTIFICATION
+        ========================= */
+
+        .certification-box {
+            max-width: 900px;
+            margin: 25px auto 0;
+
+            background: #111827;
+
+            border: 1px solid #1f2937;
+
+            border-radius: 14px;
+
+            padding: 30px;
+        }
+
+        .certification-box h3 {
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .certification-box p {
+            color: #94a3b8;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-box {
+            max-width: 850px;
+            margin: auto;
+
+            text-align: center;
+
+            background: #111827;
+
+            border: 1px solid #1f2937;
+
+            border-radius: 14px;
+
+            padding: 45px 30px;
+        }
+
+        .contact-box h3 {
+            color: #ffffff;
+            font-size: 28px;
+
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: #94a3b8;
+
+            margin-bottom: 25px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #38bdf8;
+            font-size: 15px;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid #1f2937;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            color: #64748b;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .hero {
+                gap: 35px;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+            }
+
+            .hero h2 {
+                font-size: 23px;
+            }
+
+            .skills-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: auto;
+
+                padding-top: 140px;
+
+                flex-direction: column;
+
+                text-align: center;
+
+                gap: 35px;
+            }
+
+            .hero-content {
+                order: 2;
+                max-width: 100%;
+            }
+
+            .hero-image {
+                order: 1;
+                flex: none;
+            }
+
+            .hero-image img {
+                width: 220px;
+                height: 220px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .nav-container {
+                padding: 15px 18px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 75px 20px;
+            }
+
+            .section-title {
+                font-size: 32px;
+                margin-bottom: 35px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .hero-image img {
+                width: 190px;
+                height: 190px;
+            }
+
+            .about-box,
+            .project-card,
+            .education-card,
+            .certification-box {
+                padding: 24px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                Chandan<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
+
+                <li>
+                    <a href="#education">Education</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <header class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="hello">
+                Hello, I'm
+            </div>
+
+            <h1>
+                Chandan Jena
+            </h1>
+
+            <h2>
+                Aspiring Data Analyst | AI/ML Enthusiast
+            </h2>
+
+            <p>
+                I work with data, analytics, machine learning,
+                business intelligence, and Generative AI to
+                transform data into meaningful insights and
+                intelligent solutions.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#projects" class="btn primary">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn secondary">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROFILE PHOTO -->
+
+        <div class="hero-image">
+
+            <img
+                src="profile.jpg"
+                alt="Chandan Jena"
+            >
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <div class="about-box">
+
+            <p>
+                I am Chandan Jena, an aspiring Data Analyst and
+                AI/ML enthusiast with an interest in transforming
+                data into meaningful insights and practical
+                solutions.
+            </p>
+
+            <p>
+                I have completed a Data Science with AI course
+                and have developed skills across data analytics,
+                programming, databases, visualization,
+                machine learning, and modern AI technologies.
+            </p>
+
+            <p>
+                My areas of interest include data cleaning,
+                data validation, data visualization, business
+                intelligence, machine learning, Generative AI,
+                RAG systems, Agentic AI, deep learning, and
+                neural networks.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
+
+    <section id="skills">
+
+        <h2 class="section-title">
+            My <span>Skills</span>
+        </h2>
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card">
+
+                <h3>Python</h3>
+
+                <p>
+                    Python programming, data analysis,
+                    automation and machine learning workflows.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>SQL</h3>
+
+                <p>
+                    SQL, PostgreSQL, querying, joins,
+                    aggregations and data analysis.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Data Analytics</h3>
+
+                <p>
+                    Data cleaning, data validation,
+                    exploratory analysis and insights.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Advanced Excel</h3>
+
+                <p>
+                    Advanced Excel techniques for analysis,
+                    reporting and business insights.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Power BI</h3>
+
+                <p>
+                    Interactive dashboards, reports,
+                    KPIs and business intelligence.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Tableau</h3>
+
+                <p>
+                    Data visualization, dashboards and
+                    analytical storytelling.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Machine Learning</h3>
+
+                <p>
+                    Machine learning models and
+                    project development using Python.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>AI & Generative AI</h3>
+
+                <p>
+                    Generative AI, RAG, Agentic AI,
+                    deep learning and neural networks.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
+
+    <section id="projects">
+
+        <h2 class="section-title">
+            My <span>Projects</span>
+        </h2>
+
+        <div class="projects-grid">
+
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 01
+                </div>
+
+                <h3>
+                    Data Analytics Project
+                </h3>
+
+                <p>
+                    An analytical project focused on cleaning,
+                    validating and analyzing data to discover
+                    useful business insights.
+                </p>
+
+                <div class="project-tools">
+
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>PostgreSQL</span>
+                    <span>Excel</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 02
+                </div>
+
+                <h3>
+                    Business Intelligence Dashboard
+                </h3>
+
+                <p>
+                    Interactive dashboard project designed
+                    to present KPIs, trends and business
+                    insights through data visualization.
+                </p>
+
+                <div class="project-tools">
+
+                    <span>Power BI</span>
+                    <span>Tableau</span>
+                    <span>Excel</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 03
+                </div>
+
+                <h3>
+                    Machine Learning Project
+                </h3>
+
+                <p>
+                    Machine learning project involving data
+                    preparation, model development and
+                    evaluation.
+                </p>
+
+                <div class="project-tools">
+
+                    <span>Python</span>
+                    <span>Machine Learning</span>
+                    <span>Data Science</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 04
+                </div>
+
+                <h3>
+                    RAG & Generative AI Project
+                </h3>
+
+                <p>
+                    AI project exploring Retrieval-Augmented
+                    Generation, Agentic AI and intelligent
+                    information retrieval.
+                </p>
+
+                <div class="project-tools">
+
+                    <span>RAG</span>
+                    <span>Generative AI</span>
+                    <span>Agentic AI</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================= -->
+
+    <section id="experience">
+
+        <h2 class="section-title">
+            Learning & <span>Experience</span>
+        </h2>
+
+        <div class="experience-box">
+
+            <h3>
+                Data Science & AI Project Experience
+            </h3>
+
+            <div class="date">
+                Data Analytics • AI/ML • Generative AI
+            </div>
+
+            <p>
+                Hands-on learning and project development across
+                data analytics, Python, SQL, PostgreSQL,
+                data cleaning, data validation, data visualization,
+                machine learning, dashboards, Generative AI,
+                RAG, Agentic AI, deep learning and neural networks.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDUCATION
+    ========================= -->
+
+    <section id="education">
+
+        <h2 class="section-title">
+            Education & <span>Certification</span>
+        </h2>
+
+        <div class="education-grid">
+
+
+            <div class="education-card">
+
+                <h3>
+                    Data Science with AI
+                </h3>
+
+                <div class="highlight">
+                    Completed Course
+                </div>
+
+                <p>
+                    Training covering data science,
+                    analytics, Python, machine learning
+                    and artificial intelligence concepts.
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>
+                    Certification
+                </h3>
+
+                <div class="highlight">
+                    Naresh i Technologies
+                </div>
+
+                <p>
+                    Certification and training in the
+                    Data Science / AI learning track.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="certification-box">
+
+            <h3>
+                Areas Covered
+            </h3>
+
+            <p>
+                Python • SQL • PostgreSQL • Data Cleaning •
+                Data Validation • Data Visualization •
+                Advanced Excel • Power BI • Tableau •
+                Machine Learning • Generative AI • RAG •
+                Agentic AI • Deep Learning • Neural Networks
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact">
+
+        <h2 class="section-title">
+            Contact <span>Me</span>
+        </h2>
+
+        <div class="contact-box">
+
+            <h3>
+                Let's Connect
+            </h3>
+
+            <p>
+                I am interested in data analytics,
+                AI/ML opportunities, projects and
+                professional collaborations.
+            </p>
+
+            <div class="contact-links">
+
+                <a href="mailto:jenachandankumar773@gmail.com">
+                    📧 Email
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/chandan-jena-82257937a"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+
+                <a
+                    href="https://github.com/7735Chandanjena"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Chandan Jena. All rights reserved.
+        </p>
+
+        <p>
+            Data Analyst | AI/ML Enthusiast
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
