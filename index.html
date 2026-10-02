@@ -1,79 +1,833 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Chandan Jena | Data Analyst & AI/ML</title>
+    <title>Chandan Jena | Data Analyst & AI/ML Enthusiast</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1120;
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(11, 17, 32, 0.95);
+            border-bottom: 1px solid #1f2937;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            max-width: 1150px;
+            margin: auto;
+            padding: 150px 25px 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hello {
+            color: #38bdf8;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #cbd5e1;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 22px;
+            border-radius: 7px;
+            border: 1px solid #38bdf8;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .primary {
+            background: #38bdf8;
+            color: #07111f;
+        }
+
+        .secondary {
+            color: #38bdf8;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* GENERAL */
+
+        section {
+            max-width: 1150px;
+            margin: auto;
+            padding: 90px 25px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .section-title span {
+            color: #38bdf8;
+        }
+
+        .section-description {
+            color: #94a3b8;
+            max-width: 750px;
+            margin-bottom: 40px;
+        }
+
+        /* ABOUT */
+
+        .about-box {
+            background: #111827;
+            padding: 30px;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+        }
+
+        .about-box p {
+            color: #cbd5e1;
+            margin-bottom: 15px;
+        }
+
+        /* SKILLS */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .skill-card {
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 10px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .skill-card h3 {
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        /* PROJECTS */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+            padding: 28px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .project-card h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .project-tools {
+            color: #38bdf8;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        /* EXPERIENCE */
+
+        .experience-card {
+            background: #111827;
+            border-left: 3px solid #38bdf8;
+            padding: 28px;
+            border-radius: 8px;
+        }
+
+        .experience-card h3 {
+            color: white;
+        }
+
+        .experience-card .company {
+            color: #38bdf8;
+            margin: 5px 0;
+        }
+
+        .experience-card .date {
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+        .experience-card ul {
+            padding-left: 20px;
+            color: #cbd5e1;
+        }
+
+        /* EDUCATION */
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .education-card {
+            background: #111827;
+            padding: 28px;
+            border-radius: 10px;
+            border: 1px solid #1f2937;
+        }
+
+        .education-card h3 {
+            color: white;
+        }
+
+        .education-card p {
+            color: #94a3b8;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
+            text-align: center;
+            background: #111827;
+            border: 1px solid #1f2937;
+            padding: 50px 25px;
+            border-radius: 12px;
+        }
+
+        .contact-box p {
+            color: #94a3b8;
+            margin: 10px 0 25px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #38bdf8;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #1f2937;
+            color: #64748b;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .skills-grid,
+            .projects-grid,
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .hero {
+                padding-top: 120px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            section {
+                padding: 65px 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Chandan Jena</h1>
-        <h2>Data Analyst | AI/ML Enthusiast</h2>
+    <!-- NAVIGATION -->
 
-        <p>
-            SQL | Python | Excel | Power BI | Machine Learning
-        </p>
+    <nav>
+        <div class="nav-container">
+
+            <div class="logo">
+                Chandan<span>.</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="hello">
+                Hello, I'm
+            </div>
+
+            <h1>Chandan Jena</h1>
+
+            <h2>
+                Aspiring Data Analyst | AI/ML Enthusiast
+            </h2>
+
+            <p>
+                I work with data, analytics, machine learning,
+                business intelligence, and Generative AI to
+                transform data into meaningful insights and
+                intelligent solutions.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#projects" class="btn primary">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn secondary">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
     </header>
 
-    <hr>
 
-    <section>
-        <h2>About Me</h2>
+    <!-- ABOUT -->
 
-        <p>
-            Welcome to my portfolio. I am building my skills in
-            data analytics, artificial intelligence, and machine learning.
+    <section id="about">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <p class="section-description">
+            Data Analyst with a growing focus on Artificial Intelligence
+            and Machine Learning.
         </p>
+
+        <div class="about-box">
+
+            <p>
+                I am an aspiring Data Analyst and AI/ML enthusiast
+                with hands-on experience in SQL, Python, Excel,
+                Power BI, Tableau, machine learning and data
+                visualization.
+            </p>
+
+            <p>
+                I enjoy cleaning and validating data, exploring
+                patterns, building dashboards, developing machine
+                learning models and creating practical AI solutions.
+            </p>
+
+            <p>
+                I have also worked on projects involving
+                Generative AI, RAG systems, deep learning,
+                neural networks and intelligent applications.
+            </p>
+
+        </div>
+
     </section>
 
-    <section>
-        <h2>Skills</h2>
 
-        <ul>
-            <li>SQL</li>
-            <li>Python</li>
-            <li>Excel</li>
-            <li>Power BI</li>
-            <li>Machine Learning</li>
-            <li>Data Visualization</li>
-        </ul>
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2 class="section-title">
+            Technical <span>Skills</span>
+        </h2>
+
+        <p class="section-description">
+            Technologies and areas I work with.
+        </p>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>Python</h3>
+                <p>Pandas, NumPy, Matplotlib, Machine Learning</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>SQL</h3>
+                <p>MySQL, PostgreSQL, SQLite, JOINs, GROUP BY</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Data Analytics</h3>
+                <p>Data Cleaning, Validation, EDA, KPI Analysis</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Excel</h3>
+                <p>Advanced Excel, Pivot Tables, VLOOKUP/XLOOKUP</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Power BI</h3>
+                <p>Interactive dashboards, KPIs and reporting</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Tableau</h3>
+                <p>Data visualization and interactive dashboards</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Machine Learning</h3>
+                <p>Regression, Classification, KNN and Feature Engineering</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Generative AI</h3>
+                <p>RAG, LLMs, Embeddings and Prompt Engineering</p>
+            </div>
+
+        </div>
+
     </section>
 
-    <section>
-        <h2>Projects</h2>
 
-        <h3>Employee Data Analysis</h3>
-        <p>
-            SQL project analyzing employee salaries,
-            departments, cities, and employee information.
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2 class="section-title">
+            Featured <span>Projects</span>
+        </h2>
+
+        <p class="section-description">
+            Selected projects demonstrating my work in data analytics,
+            business intelligence, machine learning and AI.
         </p>
 
-        <h3>Sales Dashboard</h3>
-        <p>
-            Power BI project for analyzing sales,
-            revenue, customers, and product performance.
-        </p>
+        <div class="projects-grid">
 
-        <h3>AI/ML Project</h3>
-        <p>
-            Machine learning project demonstrating
-            data preprocessing, model training, and evaluation.
-        </p>
+
+            <div class="project-card">
+
+                <h3>Urban Mobility Ride Performance Analytics</h3>
+
+                <div class="project-tools">
+                    MySQL | SQL | Power BI
+                </div>
+
+                <p>
+                    Analyzed ride-booking data to study booking status,
+                    cancellations, vehicle performance, revenue,
+                    ratings and customer behavior.
+                </p>
+
+                <a
+                    href="https://github.com/7735Chandanjena/Urban_Mobality_Ride_Performance_Analytics"
+                    target="_blank"
+                    class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Super Store Sales Analysis</h3>
+
+                <div class="project-tools">
+                    Power BI | Excel | CSV
+                </div>
+
+                <p>
+                    Built an interactive sales dashboard analyzing
+                    revenue, profit, customer segments, categories,
+                    payment modes and regional performance.
+                </p>
+
+                <a
+                    href="https://github.com/7735Chandanjena/Super_store_Analysis_Dashboard"
+                    target="_blank"
+                    class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Agriculture Recommendation Intelligent System</h3>
+
+                <div class="project-tools">
+                    Python | Scikit-learn | Flask | Pandas
+                </div>
+
+                <p>
+                    Developed an intelligent system using machine
+                    learning for crop recommendation, yield estimation,
+                    irrigation planning and fertilizer strategy.
+                </p>
+
+                <a href="#" class="project-link">
+                    Coming Soon →
+                </a>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>E-Commerce Customer Support RAG System</h3>
+
+                <div class="project-tools">
+                    Python | RAG | Gemini | ChromaDB | RAGAS
+                </div>
+
+                <p>
+                    Built an end-to-end Retrieval Augmented Generation
+                    pipeline and evaluated retrieval quality using
+                    Precision@K, Recall@K, MRR and NDCG.
+                </p>
+
+                <a href="#" class="project-link">
+                    Coming Soon →
+                </a>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Credit Risk Modeling System</h3>
+
+                <div class="project-tools">
+                    Python | Scikit-learn | XGBoost | SHAP | MLflow
+                </div>
+
+                <p>
+                    Developed a machine learning system for loan
+                    default prediction with feature engineering,
+                    model comparison, explainability and API scoring.
+                </p>
+
+                <a
+                    href="https://github.com/7735Chandanjena/Credit_risk_ml_model"
+                    target="_blank"
+                    class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+        </div>
+
     </section>
 
-    <section>
-        <h2>Contact</h2>
 
-        <p>
-            GitHub:
-            <a href="https://github.com/7735Chandanjena">
-                GitHub Profile
-            </a>
-        </p>
+    <!-- EXPERIENCE -->
+
+    <section id="experience">
+
+        <h2 class="section-title">
+            Professional <span>Experience</span>
+        </h2>
+
+        <div class="experience-card">
+
+            <h3>Business Associate</h3>
+
+            <div class="company">
+                Altruist Technologies Pvt. Ltd.
+            </div>
+
+            <div class="date">
+                Hyderabad | May 2026 – Present
+            </div>
+
+            <ul>
+                <li>
+                    Maintain and update Excel/CSV-based sales
+                    and renewal trackers.
+                </li>
+
+                <li>
+                    Clean, validate and reconcile business data
+                    using Pivot Tables, VLOOKUP and SUMIFS.
+                </li>
+
+                <li>
+                    Analyze sales and renewal data to track KPIs
+                    and business performance.
+                </li>
+
+                <li>
+                    Prepare daily, weekly, monthly and quarterly
+                    reports.
+                </li>
+
+            </ul>
+
+        </div>
+
     </section>
+
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <h2 class="section-title">
+            Education & <span>Certification</span>
+        </h2>
+
+        <div class="education-grid">
+
+            <div class="education-card">
+
+                <h3>B.Sc. Physics</h3>
+
+                <p>
+                    Aska Science College /
+                    Berhampur University
+                </p>
+
+                <p>
+                    2022 | 70%
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>PGDCA</h3>
+
+                <p>
+                    Post Graduate Diploma in
+                    Computer Applications
+                </p>
+
+                <p>
+                    2022 | 85%
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>Data Science with AI</h3>
+
+                <p>
+                    Naresh iTechnology
+                </p>
+
+                <p>
+                    Jul 2025 – Apr 2026
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2 class="section-title">
+            Let's <span>Connect</span>
+        </h2>
+
+        <div class="contact-box">
+
+            <p>
+                I'm open to opportunities in Data Analytics,
+                Business Intelligence, Machine Learning and AI.
+            </p>
+
+            <div class="contact-links">
+
+                <a href="mailto:jenachandankumar773@gmail.com">
+                    Email
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/chandan-jena-82257937a"
+                    target="_blank">
+                    LinkedIn
+                </a>
+
+                <a
+                    href="https://github.com/7735Chandanjena"
+                    target="_blank">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        © 2026 Chandan Jena. All Rights Reserved.
+
+    </footer>
 
 </body>
+
 </html>
